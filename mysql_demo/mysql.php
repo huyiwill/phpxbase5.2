@@ -42,7 +42,7 @@ class mysql{
     function insert($array, $table){
         $keys   = join(',', array_keys($array));
         $values = "'" . join("','", array_values($array)) . "'";
-        $sql    = "insert {$table}({$keys}) VALUES ({$values})";
+        $sql    = "insert into {$table}({$keys}) VALUES ({$values})";
         $res    = mysql_query($sql);
         if($res){
             return mysql_insert_id();
