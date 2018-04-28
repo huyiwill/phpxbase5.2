@@ -13,7 +13,7 @@ class Sqlserver{
         $this->conn = sqlsrv_connect($server, array('UID' => $user, 'PWD' => $pass, 'Database' => $dbname));
         if($this->conn === false){
             $this->error_log[] = sqlsrv_errors();
-           // print_r($this->error_log);
+            print_r($this->error_log);
             die(33);
         }
     }
